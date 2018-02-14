@@ -1,0 +1,182 @@
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211
+$ git config --global user.name "Maryam Zain"
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211
+$ git config --global user.email "maryam.abdelmaksoud@student.guc.edu.eg"
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211
+$ git config --global color.ui true
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211
+$ mkdir maryamzain37-2211
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211
+$ cd maryamzain37-2211
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211
+$ git init
+Initialized empty Git repository in C:/Users/USCS/Desktop/maryamzain37-2211/mary                                                                                                        amzain37-2211/.git/
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (mast                                                                                                        er)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (mast                                                                                                        er)
+$ git add one.txt
+fatal: pathspec 'one.txt' did not match any files
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (mast                                                                                                        er)
+$ git add "one.txt"
+fatal: pathspec 'one.txt' did not match any files
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (mast                                                                                                        er)
+$ git add "one.txt"
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (mast                                                                                                        er)
+$ git add "two.txt"
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (mast                                                                                                        er)
+$ git add "three.txt"
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (mast                                                                                                        er)
+$ git commit -m "adding all files "
+[master (root-commit) daf22b9] adding all files
+ 3 files changed, 187 insertions(+)
+ create mode 100644 one.txt
+ create mode 100644 three.txt
+ create mode 100644 two.txt
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (mast                                                                                                        er)
+$ git rm "two.txt"
+rm 'two.txt'
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (mast                                                                                                        er)
+$ git commit -m"deleted status"
+[master acd9d12] deleted status
+ 1 file changed, 100 deletions(-)
+ delete mode 100644 two.txt
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (mast                                                                                                        er)
+$ git log
+commit acd9d12247c6b766c3e80ce28990fae30211ffd3 (HEAD -> master)
+Author: Maryam Zain <maryam.abdelmaksoud@student.guc.edu.eg>
+Date:   Tue Feb 13 13:29:29 2018 -0800
+
+    deleted status
+
+commit daf22b943e6d39a1b4707d70da58f0c07dc278f8
+Author: Maryam Zain <maryam.abdelmaksoud@student.guc.edu.eg>
+Date:   Tue Feb 13 13:29:01 2018 -0800
+
+    adding all files
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (mast                                                                                                        er)
+$ git revert acd9d12247c6b766c3e80ce28990fae30211ffd3
+[master dd981ec] Revert "deleted status"
+ 1 file changed, 100 insertions(+)
+ create mode 100644 two.txt
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (mast                                                                                                        er)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        AllMyCommands.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (mast                                                                                                        er)
+$ git ls-files
+one.txt
+three.txt
+two.txt
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (mast                                                                                                        er)
+$ git remote add origin https://github.com/maryamzain/maryamse.git
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (mast                                                                                                        er)
+$ git remote -v
+origin  https://github.com/maryamzain/maryamse.git (fetch)
+origin  https://github.com/maryamzain/maryamse.git (push)
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (mast                                                                                                        er)
+$  git push -u origin master
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 8.26 KiB | 939.00 KiB/s, done.
+Total 8 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/maryamzain/maryamse.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (mast                                                                                                        er)
+$ touch README.md
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (mast                                                                                                        er)
+$ git branch README
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (mast                                                                                                        er)
+$ git checkout README
+Switched to branch 'README'
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (READ                                                                                                        ME)
+$ git commit -m " created a read.md file and then creating a read.md brach "
+On branch README
+Untracked files:
+        AllMyCommands.txt
+        README.md
+
+nothing added to commit but untracked files present
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (READ                                                                                                        ME)
+$ git add README.md
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (READ                                                                                                        ME)
+$ $ git commit -m" created a read.md file and then creating a read.md brach
+> ^C
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (README)
+$ git commit -m" created a read.md file and then creating a read.md branch
+> ^C
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (README)
+$ git commit -m "created a read.md file and then creading a read.md branch"
+[README 6c8aa5d] created a read.md file and then creading a read.md branch
+ 1 file changed, 5 insertions(+)
+ create mode 100644 README.md
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (README)
+$ ls
+AllMyCommands.txt  one.txt  README.md  three.txt  two.txt
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (README)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (master)
+$ git merge README
+Updating dd981ec..6c8aa5d
+Fast-forward
+ README.md | 5 +++++
+ 1 file changed, 5 insertions(+)
+ create mode 100644 README.md
+
+USCS@DESKTOP-HHH9HGP MINGW64 ~/Desktop/maryamzain37-2211/maryamzain37-2211 (master)
+$ git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 549 bytes | 183.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/maryamzain/maryamse.git
+   dd981ec..6c8aa5d  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
